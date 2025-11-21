@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Categories from "../Menu/categories";
+import Categories from "../Menu/Categories";
 import MenuItems from "../Menu/MenuItems";
 
 const Menu = () => {
