@@ -1,0 +1,106 @@
+@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap";
+
+@import "tailwindcss";
+
+@theme {
+  /* --- COLORS --- */
+  /* v4 automatically creates utilities like bg-spoon-cream, text-spoon-sage, etc. */
+  --color-spoon-cream: #FDFCF0;
+  --color-spoon-charcoal: #2D3748;
+  --color-spoon-gold: #D4AF37;
+  --color-spoon-sage: #8A9A5B;
+  --color-spoon-sage-dark: #5F6F42;
+
+  /* --- FONTS --- */
+  /* Overriding default sans/serif updates 'font-sans' and 'font-serif' classes */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Lato", sans-serif;
+}
+
+body {
+  @apply font-sans;
+}
+
+.container {
+  width: 100%;
+  @media (width >=40rem
+
+    /* 640px */
+  ) {
+    max-width: 40rem
+      /* 640px */
+    ;
+  }
+
+  @media (width >=48rem
+
+    /* 768px */
+  ) {
+    max-width: 48rem
+      /* 768px */
+    ;
+  }
+
+  @media (width >=64rem
+
+    /* 1024px */
+  ) {
+    max-width: 64rem
+      /* 1024px */
+    ;
+  }
+
+  @media (width >=80rem
+
+    /* 1280px */
+  ) {
+    max-width: 80rem
+      /* 1280px */
+    ;
+  }
+
+  @media (width >=96rem
+
+    /* 1536px */
+  ) {
+    max-width: 96rem
+      /* 1536px */
+    ;
+  }
+}
+
+.dotted-leader {
+  background-image: radial-gradient(circle, #D4AF37 1px, transparent 1px);
+  background-size: 6px 100%;
+  background-position: 0 bottom;
+  background-repeat: repeat-x;
+  height: 4px;
+  flex-grow: 1;
+  margin: 0 10px;
+  opacity: 0.6;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.group:hover {
+  & .bg-cover {
+    @apply scale-110 grayscale-0;
+  }
+  & .overlay {
+    @apply bg-transparent;
+  }
+  & .text {
+    @apply translate-y-0;
+  }
+}
+
+html {
+  @apply scroll-smooth;
+}
