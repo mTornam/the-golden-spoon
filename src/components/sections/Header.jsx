@@ -19,24 +19,55 @@ const Header = () => {
       text: "Gallery",
     },
   ];
+  
   const [navIsOpen, setNavIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+        rootMargin: "-50px 0px 0px 0px",
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 80) {
+  //       setIsScrolled(true);
+  //     } else {
+  //       setIsScrolled(false);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <header
@@ -56,15 +87,27 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <nav className="items-center space-x-8 uppercase tracking-widest text-sm hidden md:flex">
-          <a href="#Home">Home</a>
-          <a href="#Menu">Menu </a>
-          <a href="#About">About </a>
-          <a href="#Gallery">Gallery </a>
+          {navLinks.map((link, index) => {
+            const isActive = activeSection === link.path.substring(1);
+            return (
+              <a
+                key={index}
+                href={link.path}
+                className={` ${
+                  isActive
+                    ? "text-spoon-gold hover:text-spoon-sage"
+                    : "hover:text-spoon-gold"
+                } `}
+              >
+                {link.text}
+              </a>
+            );
+          })}
           <a
             href="#Reservations"
             className="border border-spoon-gold text-xs font-light px-4 py-2 text-spoon-gold hover:bg-spoon-gold hover:text-spoon-cream transition-all duration-300"
           >
-            Book a Table{" "}
+            Book a Table
           </a>
         </nav>
 
