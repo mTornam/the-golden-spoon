@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
         <div>
           <h4 className="font-serif text-xl text-spoon-gold mb-4">
-            The Golden Spoon
+            Golden Bowl
           </h4>
           <p className="text-gray-400 text-sm leading-relaxed">
             123 Independence Avenue
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center text-gray-400 text-xs mt-12 pt-8 border-t border-gray-800">
-        &copy; {new Date().getUTCFullYear()} The Golden Spoon. All rights
+        &copy; {new Date().getUTCFullYear()} Golden Bowl. All rights
         reserved.
       </div>
     </footer>

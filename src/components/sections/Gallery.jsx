@@ -9,7 +9,7 @@ const Gallery = () => {
             The Ambience
           </h2>
           <p className="text-gray-500">
-            A glimpse into the Golden Spoon experience.
+            A glimpse into the Golden Bowl experience.
           </p>
         </div>
 

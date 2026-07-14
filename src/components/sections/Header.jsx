@@ -82,7 +82,8 @@ const Header = () => {
           href="#Home"
           className="text-2xl font-serif font-bold tracking-wide whitespace-nowrap"
         >
-          The Golden Spoon<span className="text-spoon-gold">.</span>
+          Golden <span className="text-spoon-gold">Bowl</span>
+          <span className="text-spoon-gold">.</span>
         </a>
 
         {/* Desktop Menu */}

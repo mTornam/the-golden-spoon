@@ -20,7 +20,7 @@ const Hero = () => {
         </h1>
 
         <p className="to-gray-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
-          Welcome to The Golden Spoon. We believe food is an experience. Sourced
+          Welcome to Golden Bowl. We believe food is an experience. Sourced
           locally and crafted with passion, our dishes bring the authentic
           flavors of Ghana to your table.
         </p>
