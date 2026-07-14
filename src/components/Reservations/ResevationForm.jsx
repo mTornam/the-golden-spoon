@@ -6,6 +6,7 @@ const ResevationForm = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [feedback, setFeedback] = useState({ message: "", type: "" });
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const today = new Date().toISOString().split("T")[0];
   const openingTime = "11:00";
   const closingTime = "22:00";
@@ -95,7 +96,32 @@ const ResevationForm = () => {
       message: "Reservation request received. We will confirm shortly.",
       type: "success",
     });
+    setIsSubmitted(true);
   };
+
+  if (isSubmitted) {
+    return (
+      <div className="rounded-2xl border border-spoon-gold/30 bg-white/90 p-8 text-center shadow-lg">
+        <p className="mb-3 text-sm uppercase tracking-[0.3em] text-spoon-gold">
+          Reservation Received
+        </p>
+        <h3 className="mb-3 font-serif text-2xl text-spoon-charcoal">
+          Thank You for Choosing Golden Bowl
+        </h3>
+        <p className="mb-6 text-sm leading-7 text-gray-600">
+          We’ve received your reservation request and will confirm it shortly.
+          Please keep an eye on your phone or email for the confirmation message.
+        </p>
+        <button
+          type="button"
+          onClick={() => setIsSubmitted(false)}
+          className="rounded-full border border-spoon-gold px-6 py-3 text-sm font-semibold uppercase tracking-widest text-spoon-gold transition hover:bg-spoon-gold hover:text-white"
+        >
+          Make Another Reservation
+        </button>
+      </div>
+    );
+  }
 
   return (
     <form id="reservation-form" className="space-y-6" onSubmit={handleSubmit}>
