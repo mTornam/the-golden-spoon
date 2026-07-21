@@ -18,8 +18,8 @@ const Categories = ({ menuType, activeCategory, setActiveCategory }) => {
             className={`
             px-4 py-1 md:px-6 md:py-2 text-xs md:text-sm font-bold uppercase tracking-widest transition-all whitespace-nowrap cursor-pointer
             ${activeCategory === category
-                ? 'text-spoon-charcoal border-b-2 border-spoon-gold'
-                : 'text-gray-400 hover:text-spoon-sage border-b-2 border-transparent'}
+                ? 'text-bowl-charcoal border-b-2 border-bowl-gold'
+                : 'text-gray-400 hover:text-bowl-sage border-b-2 border-transparent'}
           `} >
             {category}
           </button>

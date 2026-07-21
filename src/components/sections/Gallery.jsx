@@ -2,10 +2,10 @@ import React from "react";
 
 const Gallery = () => {
   return (
-    <section id="Gallery" className="py-24 bg-spoon-cream">
+    <section id="Gallery" className="py-24 bg-bowl-cream">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl text-spoon-charcoal mb-2">
+          <h2 className="font-serif text-4xl text-bowl-charcoal mb-2">
             The Ambience
           </h2>
           <p className="text-gray-500">

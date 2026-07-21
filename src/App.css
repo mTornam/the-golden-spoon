@@ -4,12 +4,12 @@
 
 @theme {
   /* --- COLORS --- */
-  /* v4 automatically creates utilities like bg-spoon-cream, text-spoon-sage, etc. */
-  --color-spoon-cream: #FDFCF0;
-  --color-spoon-charcoal: #2D3748;
-  --color-spoon-gold: #D4AF37;
-  --color-spoon-sage: #8A9A5B;
-  --color-spoon-sage-dark: #5F6F42;
+  /* v4 automatically creates utilities like bg-bowl-cream, text-bowl-sage, etc. */
+  --color-bowl-cream: #FDFCF0;
+  --color-bowl-charcoal: #2D3748;
+  --color-bowl-gold: #D4AF37;
+  --color-bowl-sage: #8A9A5B;
+  --color-bowl-sage-dark: #5F6F42;
 
   /* --- FONTS --- */
   /* Overriding default sans/serif updates 'font-sans' and 'font-serif' classes */

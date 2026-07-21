@@ -4,10 +4,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-spoon-charcoal text-white py-16 border-t border-gray-800">
+    <footer className="bg-bowl-charcoal text-white py-16 border-t border-gray-800">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
         <div>
-          <h4 className="font-serif text-xl text-spoon-gold mb-4">
+          <h4 className="font-serif text-xl text-bowl-gold mb-4">
             Golden Bowl
           </h4>
           <p className="text-gray-400 text-sm leading-relaxed">
@@ -26,14 +26,19 @@ const Footer = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
+            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1180.5094502019776!2d-0.17875239952903046!3d5.60468573999734!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sgh!4v1784376178529!5m2!1sen!2sgh" width="100%"
+              height="100%"
+              style={{ border: "0" }}
+              allowFullScreen
+              loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> */}
           </div>
         </div>
         <div>
-          <h4 className="font-serif text-xl text-spoon-gold mb-4">Contact</h4>
+          <h4 className="font-serif text-xl text-bowl-gold mb-4">Contact</h4>
           <div className="text-gray-400 text-sm leading-relaxed">
             <a href="tel:+233241234567">+233 24 123 4567</a>
             <br />
-            <a href="mailto:info@thegoldenspoon.gh">info@thegoldenspoon.gh</a> 
+            <a href="mailto:info@thegoldenbowl.com">info@thegoldenbowl.com</a>
             <br />
             <div className="text-lg space-x-4">
               <a href="https://wa.me/+233541758730?text=hello" target="_blank">
@@ -49,7 +54,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h4 className="font-serif text-xl text-spoon-gold mb-4">Hours</h4>
+          <h4 className="font-serif text-xl text-bowl-gold mb-4">Hours</h4>
           <p className="text-gray-400 text-sm leading-relaxed">
             Mon-Sun: 11:00 AM - 10:00 PM
             <br />

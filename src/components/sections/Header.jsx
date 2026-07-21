@@ -24,6 +24,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
+  // Change header background on scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -33,6 +34,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Intersection Observer to track active section
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const observer = new IntersectionObserver(
@@ -53,27 +55,11 @@ const Header = () => {
     return () => observer.disconnect();
   }, []);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 80) {
-  //       setIsScrolled(true);
-  //     } else {
-  //       setIsScrolled(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   return (
     <header
       className={` w-full fixed z-50
       ${
-        isScrolled ? "py-2 shadow-2xl bg-spoon-charcoal" : "py-4 bg-transparent"
+        isScrolled ? "py-2 bg-bowl-charcoal" : "py-4 bg-transparent"
       }
     `}
     >
@@ -82,8 +68,8 @@ const Header = () => {
           href="#Home"
           className="text-2xl font-serif font-bold tracking-wide whitespace-nowrap"
         >
-          Golden <span className="text-spoon-gold">Bowl</span>
-          <span className="text-spoon-gold">.</span>
+          Golden <span className="text-bowl-gold">Bowl</span>
+          <span className="text-bowl-gold">.</span>
         </a>
 
         {/* Desktop Menu */}
@@ -96,8 +82,8 @@ const Header = () => {
                 href={link.path}
                 className={` ${
                   isActive
-                    ? "text-spoon-gold hover:text-spoon-sage"
-                    : "hover:text-spoon-gold"
+                    ? "text-bowl-gold hover:text-bowl-sage"
+                    : "hover:text-bowl-gold"
                 } `}
               >
                 {link.text}
@@ -106,7 +92,7 @@ const Header = () => {
           })}
           <a
             href="#Reservations"
-            className="border border-spoon-gold text-xs font-light px-4 py-2 text-spoon-gold hover:bg-spoon-gold hover:text-spoon-cream transition-all duration-300"
+            className="border border-bowl-gold text-xs font-light px-4 py-2 text-bowl-gold hover:bg-bowl-gold hover:text-bowl-cream transition-all duration-300"
           >
             Book a Table
           </a>
@@ -123,13 +109,13 @@ const Header = () => {
 
       {/* Mobile Menu Dropdown */}
       {navIsOpen && (
-        <div className="md:hidden absolute w-full top-full border-t border-gray-700 shadow-xl bg-spoon-charcoal">
+        <div className="md:hidden absolute w-full top-full border-t border-gray-700 shadow-xl bg-bowl-charcoal">
           <nav className="flex flex-col text-center space-y-4 p-6 text-white tracking-widest">
             {navLinks.map((link) => (
               <a
                 href={link.path}
                 onClick={() => setNavIsOpen(!navIsOpen)}
-                className="hover:text-spoon-gold active:text-spoon-gold"
+                className="hover:text-bowl-gold active:text-bowl-gold"
               >
                 {link.text}
               </a>
@@ -137,7 +123,7 @@ const Header = () => {
             <a
               href="#Reservations"
               onClick={() => setNavIsOpen(!navIsOpen)}
-              className="text-spoon-gold"
+              className="text-bowl-gold"
             >
               Reservations{" "}
             </a>

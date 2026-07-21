@@ -16,13 +16,13 @@ const Menu = () => {
     <section id="Menu" className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-10">
         <div className="text-center mb-12">
-          <span className="text-spoon-sage font-bold tracking-widest uppercase text-xs">
+          <span className="text-bowl-sage font-bold tracking-widest uppercase text-xs">
             Culinary Selection
           </span>
-          <h2 className="font-serif text-4xl md:text-5xl text-spoon-charcoal mt-2 mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl text-bowl-charcoal mt-2 mb-4">
             Our Menu
           </h2>
-          <div className="w-24 h-1 bg-spoon-gold mx-auto"></div>
+          <div className="w-24 h-1 bg-bowl-gold mx-auto"></div>
 
           <p className="mt-6 max-w-2xl mx-auto text-gray-500 italic">
             Explore our curated selection of dishes. Toggle between Foods and
@@ -32,13 +32,13 @@ const Menu = () => {
 
         {/* Menu Control Bar */}
         <div className="flex flex-col items-center space-y-6 mb-16">
-          <div className="bg-spoon-cream p-1 rounded-full border border-gray-200 inline-flex shadow-inner">
+          <div className="bg-bowl-cream p-1 rounded-full border border-gray-200 inline-flex shadow-inner">
             <button
               onClick={() => handleTypeChange("food")}
               className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all 
                 ${menuType === "food"
-                  ? "bg-spoon-sage text-white shadow-lg" // Active Style
-                  : "text-gray-500 hover:text-spoon-sage" // Inactive Style
+                  ? "bg-bowl-sage text-white shadow-lg" // Active Style
+                  : "text-gray-500 hover:text-bowl-sage" // Inactive Style
                 }`}
             >
               Foods
@@ -47,8 +47,8 @@ const Menu = () => {
               onClick={() => handleTypeChange("drink")}
               className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all 
                 ${menuType === "drink"
-                  ? "bg-spoon-sage text-white shadow-lg"
-                  : "text-gray-500 hover:text-spoon-sage"
+                  ? "bg-bowl-sage text-white shadow-lg"
+                  : "text-gray-500 hover:text-bowl-sage"
                 }`}
             >
               Drinks

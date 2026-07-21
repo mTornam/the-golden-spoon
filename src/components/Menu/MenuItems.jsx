@@ -17,14 +17,14 @@ const MenuItems = ({ menuType, activeCategory }) => {
         >
           {/* Top Row: Name -- Lines -- Price */}
           <div className="flex justify-between items-end w-full mb-1">
-            <h4 className="font-serif font-bold text-lg md:text-xl text-spoon-charcoal whitespace-nowrap pr-2">
+            <h4 className="font-serif font-bold text-lg md:text-xl text-bowl-charcoal whitespace-nowrap pr-2">
               {menu.name}
             </h4>
 
             {/* Tailwind Dotted Leader */}
             <div className="dotted-leader"></div>
 
-            <span className="text-spoon-sage font-bold font-serif text-lg whitespace-nowrap pl-2">
+            <span className="text-bowl-sage font-bold font-serif text-lg whitespace-nowrap pl-2">
               {menu.price}
             </span>
           </div>
